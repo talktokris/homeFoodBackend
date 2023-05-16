@@ -10,7 +10,8 @@ class Users_role extends Model
     use HasFactory;
 
     protected $fillable = [
-        'users_roles',
+        'lebel',
+        'status',
     ];
 
 

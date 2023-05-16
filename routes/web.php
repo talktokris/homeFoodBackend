@@ -1,6 +1,10 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+
+
+//use App\Http\Controllers\api\AuthController;
+
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -38,5 +42,6 @@ Route::middleware('auth')->group(function () {
 Route::get('/greeting', function () {
     return 'Hello World';
 });
+
 
 require __DIR__.'/auth.php';
