@@ -5,22 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Food_menu_image extends Model
+class Country extends Model
 {
     use HasFactory;
 
-
     protected $fillable = [
-        'food_menu_id',
-        'image_name',
+        'lebel',
+        'zip_code',
+        'status'
     ];
 
 
-
-
-    public function getUserInfo(){
-
-        return $this->belongsTo(User::class, 'food_menu_id', 'id');
-
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
+
 }

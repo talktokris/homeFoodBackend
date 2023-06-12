@@ -14,9 +14,15 @@ class Food_menu extends Model
         'food_title',
         'food_description',
         'veg_status',
-        'price',
+        'vender_price',
+        'customer_price ',
         'discount_per',
         'menu_profile_img_id',
         'active_status',
     ];
+
+
+    public function images(){
+        return $this->hasOne(Food_menu_image::class, 'food_menu_id', 'id');
+    }
 }
